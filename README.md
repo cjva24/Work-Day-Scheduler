@@ -32,3 +32,4 @@ THEN the saved events persist
 https://github.com/coding-boot-camp/crispy-octo-meme
 (could't get deployed link to work)
 
+![Capture](https://github.com/cjva24/Work-Day-Scheduler/assets/142863226/e352a6b5-0362-41ac-9dfb-2c6160c823b5)

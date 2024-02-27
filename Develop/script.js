@@ -22,4 +22,27 @@ $(function () {
       // Remove all classes from time block
       $(this).removeClass("past present future");
 
+      // Add appropriate class based on current hour
+      if (blockHour < currentHour) {
+        $(this).addClass("past");
+      } else if (blockHour === currentHour) {
+        $(this).addClass("present");
+      } else {
+        $(this).addClass("future");
+      }
+    });
+  }
+
+  // Call updateTimeBlocks initially to set initial class
+  updateTimeBlocks();
+
+  // Get user input from local storage and set textarea values
+  $(".time-block").each(function() {
+    var blockId = $(this).attr("id");
+    var savedInput = localStorage.getItem(blockId);
+    $(this).find(".description").val(savedInput);
+  });
+
+  // Display the current date in the header
+  $("#currentDay").text(dayjs().format("dddd, MMMM D"));
 });
